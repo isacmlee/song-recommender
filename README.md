@@ -8,7 +8,12 @@ Based on my Spotify Wrapped for 2019, I accumulated 120,000+ minutes of listenin
 * StreamingHistory.csv was obtained through Spotify with a json drop.
 * SpotifyFeatures.csv was downloaded from kaggle. (https://tinyurl.com/y7mpts3e)
 
-StreamingHistory.csv has 66,203 rows and 4 columns (Artist, Date, msPlayed, trackName). SpotifyFeatures.csv contains 223,044 rows and 17 columns. Of these 17 columns, 14 are related to a song's feautures such as popularity, mode, key, and etc. (Read more about the features here: https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/) Moreover, each row represents an individual song. 
+StreamingHistory.csv has 66,203 rows and 4 columns (Artist, Date, msPlayed, trackName). SpotifyFeatures.csv contains 223,044 rows and 17 columns. Of these 17 columns, 14 are related to a song's feautures such as popularity, mode, key, and etc.  Moreover, each row represents an individual song. 
+
+### What are song features and why use them? 
+All music in Spotify are given song features to describe the audio. For example, 1 in "acousticness" indicates a high level of confidence that the track is acoustic. If we wan't to find a good dancing song, the "danceability" feature with the value of 1 says that the song is perfect to dance to. With these values, we can explore to see if we prefer certain values more than others. What if we enjoy more acoustic music? Then, we would find more songs with lower values in acousticness. This is how we will recommend songs, by identifying features with the highest correlations to our favorite songs. 
+
+(Read more about the features here: https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/)
 
 ### Objective
 In this project, I will build a song recommender based on my personal Spotify listening history and a Spotify song features dataset. To accomplish this, I will compare 3 classifier models: 
