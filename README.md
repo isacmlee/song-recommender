@@ -34,6 +34,7 @@ Why 15? When I plotted the song counts on a histogram, there was a substantial d
 ![favorite](data/favorite.png)
 
 ### Results and Actionable Next Steps
+![Recommendations](data/recommendations.jpg)
 I was able to train a Logistic Regresssion model with a F1 score of 86% on unseen test data. The RandomForest model came in close at 84% while the DecisionTrees model was last at 73%. 
 
 Moreover, this project has enabled me to obtain a mass recommendation of songs at once instead of having to go through options such as Discover Weekly (limited to 30 songs), look through different playlists, or opt for a playlist radio.
