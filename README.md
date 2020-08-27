@@ -32,7 +32,7 @@ Why 15? When I plotted the song counts on a histogram, there was a substantial d
 
 ![favorite](data/favorite.png)
 
-### Results and Actionable Next Steps
+### Conclusion, Results and Actionable Next Steps
 ![Recommendations](data/recommendations.jpg)
 
 I was able to train a Logistic Regresssion model with a F1 score of 86% on unseen test data. The RandomForest model came in close at 84% while the DecisionTrees model was last at 73%. 
