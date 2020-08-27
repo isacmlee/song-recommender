@@ -1,5 +1,4 @@
 ## Building a Spotify Recommender based on Listening History and Song Features
-You can find the project's notebook [here](https://github.com/isacmlee/song-recommender/blob/master/song-recommender.ipynb).
 ### Introduction
 Based on my Spotify Wrapped for 2019, I accumulated 120,000+ minutes of listening which translates to over 2000 hours, which also translates to a whooping 83.3 days. So I do consider myself a huge music enthusiast and enjoy exploring all the different genres music has to offer. Because of my extensive listening history, I realized I had a lot of data to work with to create a classifier that will state whether or not I would like to listen to a song or not.
 
