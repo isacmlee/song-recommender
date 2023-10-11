@@ -1,6 +1,9 @@
 # Song Recommender (with Spotify Data)
 ![Spotify Banner](img/spotify-banner.jpeg)
 
+## Update (Oct. 2023)
+<i> This version of the SpotifyFeatures.csv dataset is no longer available. Link to new dataset can be found [here](https://www.kaggle.com/datasets/yamaerenay/spotify-dataset-19212020-600k-tracks?select=tracks.csv).</i>
+
 ## Introduction
 In 2019, I have listened to 120,000+ minutes worth of music, which can be converted to 2,000 hours and 83.3 days. So I do consider myself a huge music enthusiast and enjoy exploring new music. 
 
@@ -13,7 +16,7 @@ Create a song recommender using personal Spotify listening history and song feat
 ### StreamingHistory.csv
 Personal Spotify listening history obtained through Spotify through a JSON drop. 
 ### SpotifyFeatures.csv
-Dataset with 223,044 songs with song features such as popularity, key, valence, and more. This data was downloaded from Kaggle. Old dataset is no longer availible. Link to new dataset can be found [here (as of Oct. 2023)](https://www.kaggle.com/datasets/yamaerenay/spotify-dataset-19212020-600k-tracks?select=tracks.csv).
+Dataset with 223,044 songs with song features such as popularity, key, valence, and more. This data was downloaded from Kaggle. 
 
 #### What are Spotify's song features? 
 All songs in Spotify have song features that describe the audio numerically that range from 0 to 1. For example, the <i>valence</i> feature with a value of 1 measures the song as very happy, while a value of 0 states the opposite. 
