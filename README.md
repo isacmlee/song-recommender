@@ -1,29 +1,39 @@
-## Building a Spotify Recommender based on Listening History and Song Features
-### Introduction
-Based on my Spotify Wrapped for 2019, I accumulated 120,000+ minutes of listening which translates to over 2000 hours, which also translates to a whooping 83.3 days. So I do consider myself a huge music enthusiast and enjoy exploring all the different genres music has to offer. Because of my extensive listening history, I realized I had a lot of data to work with to create a classifier that will state whether or not I would like to listen to a song or not.
+# Song Recommender (with Spotify Data)
+![Spotify Banner](img/spotify-banner.jpeg)
 
-### About the Data 
-* Two datasets: "StreamingHistory.csv" (my Spotify listening history) and "SpotifyFeatures.csv" (dataset with songs and song features)
-* StreamingHistory.csv was obtained through Spotify with a json drop.
-* SpotifyFeatures.csv was downloaded from kaggle. (https://tinyurl.com/y7mpts3e)
+## Introduction
+In 2019, I have listened to 120,000+ minutes worth of music, which can be converted to 2,000 hours and 83.3 days. So I do consider myself a huge music enthusiast and enjoy exploring new music. 
 
-StreamingHistory.csv has 66,203 rows and 4 columns (Artist, Date, msPlayed, trackName). SpotifyFeatures.csv contains 223,044 rows and 17 columns. Of these 17 columns, 14 are related to a song's feautures such as popularity, mode, key, and etc.  Moreover, each row represents an individual song. 
+I am also a fan of Spotify's amazing recommendation system and I watned to create a "poor man's" version of it, and see if I can discover any new hidden gems through my version. 
 
-### What are song features and why use them? 
-All music in Spotify are given song features to describe the audio. For example, 1 in "acousticness" indicates a high level of confidence that the track is acoustic. If we wan't to find a good dancing song, the "danceability" feature with the value of 1 says that the song is perfect to dance to. With these values, we can explore to see if we prefer certain values more than others. What if we enjoy more acoustic music? Then, we would find more songs with lower values in acousticness. This is how we will recommend songs, by identifying features with the highest correlations to our favorite songs. 
+## Problem Statement 
+Create a song recommender using personal Spotify listening history and song features provided by Spotify to classify a song as 'Liked' or 'Not Liked'.
 
-(Read more about the features here: https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/)
+## Data 
+### StreamingHistory.csv
+Personal Spotify listening history obtained through Spotify through a JSON drop. 
+### SpotifyFeatures.csv
+Dataset with 223,044 songs with song features such as popularity, key, valence, and more. This data was downloaded from Kaggle. Old dataset is no longer availible. Link to new dataset can be found [here (as of Oct. 2023)](https://www.kaggle.com/datasets/yamaerenay/spotify-dataset-19212020-600k-tracks?select=tracks.csv).
 
-### Objective
-In this project, I will build a song recommender based on my personal Spotify listening history and a Spotify song features dataset. To accomplish this, I will compare 3 classifier models: 
+#### What are Spotify's song features? 
+All songs in Spotify have song features that describe the audio numerically that range from 0 to 1. For example, the <i>valence</i> feature with a value of 1 measures the song as very happy, while a value of 0 states the opposite. 
+
+With these values, I can explore if I prefer certain song characteristics more than others (e.g. happy vs sad music). This is how we will recommend songs by identifying features with the highest correlations to our favorite songs. 
+
+## EDA
+
+
+## Modeling
 * Logistic Regression
 * Decision Trees 
 * Random Forest
 
-I will evaluate each model based on the F1 score.
+## Model Evalution 
+### F1 
+A high F1 score indicates that the model is good at identifying both positive and negative cases, which is important to minimize the model classifying a bad song as a song that I would 'like' and maximize the model classifying a good song as a song that I would 'like'.
 
-#### Why use F1 score? 
-The F1 score enables us to take into account false negatives and false positives when calculating the accuracy of a model. If we use the generic accuracy_score method, false positives would be considered as correct predictions which is something that is inaccurate and would mislead me into thinking my model is more accurate than it is. 
+In other words, it enables us to take into account false negatives and false positives when calculating the accuracy of the model. In constrast, if we use accuracy, false positives would be considered as correct predictions which is misleading. 
+
 #### Defining our prediction variable
 Our prediction variable will be called "favorite" with 1 representing a well-liked song and 0 representing otherwise.
 But, what is a 'favorite' song? I decided to label songs with more than 15 listens as a favorite and those with less as not. 
