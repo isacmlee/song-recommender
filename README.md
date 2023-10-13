@@ -2,7 +2,10 @@
 ![Spotify Banner](img/spotify-banner.jpeg)
 
 ## Update (Oct. 2023)
-<i> This version of the SpotifyFeatures.csv dataset is no longer available. Link to new dataset can be found [here](https://www.kaggle.com/datasets/yamaerenay/spotify-dataset-19212020-600k-tracks?select=tracks.csv).</i>
+As this project is over 3 years old... 
+
+
+<i> The version of the SpotifyFeatures.csv dataset originally used in this project is no longer available. Link to new dataset can be found [here](https://www.kaggle.com/datasets/yamaerenay/spotify-dataset-19212020-600k-tracks?select=tracks.csv).</i>
 
 ## Introduction
 In 2019, I have listened to 120,000+ minutes worth of music, which can be converted to 2,000 hours and 83.3 days. So I do consider myself a huge music enthusiast and enjoy exploring new music. 
@@ -18,7 +21,6 @@ Personal Spotify listening history obtained through Spotify through a JSON drop.
 ### SpotifyFeatures.csv
 Dataset with 223,044 songs with song features such as popularity, key, valence, and more. This data was downloaded from Kaggle. 
 
-#### What are Spotify's song features? 
 All songs in Spotify have song features that describe the audio numerically that range from 0 to 1. For example, the <i>valence</i> feature with a value of 1 measures the song as very happy, while a value of 0 states the opposite. 
 
 With these values, I can explore if I prefer certain song characteristics more than others (e.g. happy vs sad music). This is how we will recommend songs by identifying features with the highest correlations to our favorite songs. 
@@ -32,7 +34,7 @@ With these values, I can explore if I prefer certain song characteristics more t
 * Random Forest
 
 ## Model Evalution 
-### F1 
+### F1 Score
 A high F1 score indicates that the model is good at identifying both positive and negative cases, which is important to minimize the model classifying a bad song as a song that I would 'like' and maximize the model classifying a good song as a song that I would 'like'.
 
 In other words, it enables us to take into account false negatives and false positives when calculating the accuracy of the model. In constrast, if we use accuracy, false positives would be considered as correct predictions which is misleading. 
