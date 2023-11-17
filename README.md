@@ -1,8 +1,8 @@
 # Song Recommender (with Spotify Data)
 ![Spotify Banner](img/spotify-banner.jpeg)
 
-## Update (Oct. 2023)
-As this project is over 3 years old..
+## Update In Progress (Oct. 2023)
+As this project is over 3 years old, I will be updating the code and README. 
 
 
 <i> The version of the SpotifyFeatures.csv dataset originally used in this project is no longer available. Link to new dataset can be found [here](https://www.kaggle.com/datasets/yamaerenay/spotify-dataset-19212020-600k-tracks?select=tracks.csv).</i>
